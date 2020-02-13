@@ -1,0 +1,37 @@
+{
+	"exclude": [
+		"**/bin",
+		"**/bower_components",
+		"**/jspm_packages",
+		"**/node_modules",
+		"**/obj",
+		"**/platforms"
+	],
+	"Loader": {
+		"Updaters": [
+			{
+				"JobName": "AfraidUpdaterJob",
+				"Updater": "AfraidUpdater",
+				"PluginDll": "DnsUpdater.Afraid.dll",
+				"FullNamespace": "DnsUpdater.Afraid.Core, DnsUpdater.Afraid",
+				"Schedule": {
+					"When": "00:00",
+					"Frequency": "Daily",
+					"Immediate": true
+				}
+			},
+			{
+				"JobName": "NoipUpdaterJob",
+				"Updater": "NoipUpdater",
+				"PluginDll": "DnsUpdater.Noip.dll",
+				"FullNamespace": "DnsUpdater.Noip.Core, DnsUpdater.Noip",
+				"Schedule": {
+					"When": "00:00",
+					"Frequency": "Weekly",
+					"Immediate": true,
+					"DayOfWeek": 0
+				}
+			}
+		]
+	}
+}
